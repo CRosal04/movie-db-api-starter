@@ -87,6 +87,7 @@ function getBirthYearMovies(e){
 
     // Get the user's input/year value
     // TO DO
+    let year = encodeURI(document.getElementById("userYear").value);
     // the place on the page where we'll add the movies
     let birthYearMovies = document.getElementById("birthYear");
 
@@ -95,6 +96,9 @@ function getBirthYearMovies(e){
     }else{
         // TO DO - Build the endpoint we need (this one has additional parameters)
         // TO DO
+        let beginURL = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=1940"
+        let endURL = "&sort_by=revenue.desc";
+        let url = '${beginURL}${}${}'
         let imgUrl = "https://image.tmdb.org/t/p/w400";
 
         // ajax time!
