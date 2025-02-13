@@ -19,7 +19,30 @@ const xhr = new XMLHttpRequest();
 
 xhr.addEventListener('readystatechange', function () {
   if (this.readyState === this.DONE) {
-    console.log(this.responseText);
+    console.log(this.response);
+
+    let json=JSON.parse(this.response);
+    let html = "";
+    /// display featured movie
+    html +=   `<section id="featured">
+    <h3>${json.results[0].title}</h3>
+    <img src="${imgUrl}${json.results[0].poster_path}" alt="">
+    <p>"${json.results[0].overview}"</p>
+</section>`;
+
+for(let i = 1; i< 19;i++){
+
+    html+=  `<section class="movie">
+    <img src="${imgUrl}${json.results[i].poster_path}" alt="">
+    <div>
+        <h3>${json.results[i].title}</h3>
+        <p>${json.results[i].overview}
+            <span class="vote">Vote Average: ${json.results[i].vote_average}</span>
+        </p>
+    </div>
+</section>`
+}
+popularMovies.innerHTML =html;
   }
 });
 
@@ -33,12 +56,7 @@ xhr.send();
     /*
         // This code can be used for the display of the featured movie
         // (it is a string template)
-            `<section id="featured">
-                <h3>${"TO DO"}</h3>
-                <img src="${"TO DO"}" alt="">
-                <p>"${"TO DO"}"</p>
-            </section>`
-
+          
 
         // This code can be used for the display of the other popular movies (18 of them)
         // (it is a string template)
