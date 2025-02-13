@@ -3,6 +3,7 @@
 function getPopularMovies(){
     // the endpoint
     // TO DO
+    let url = "https://api.themoviedb.org/3/movie/popular?api_key=e4baf6aeca9d9fe1343218840ad2e6f3&language=en-US&page=1";
     // the place on the page where we'll display the movies
     let popularMovies = document.getElementById("popular");
     let imgUrl = "https://image.tmdb.org/t/p/w400";
@@ -22,7 +23,7 @@ xhr.addEventListener('readystatechange', function () {
   }
 });
 
-xhr.open('GET', 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1');
+xhr.open('GET', url);
 xhr.setRequestHeader('accept', 'application/json');
 xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNGJhZjZhZWNhOWQ5ZmUxMzQzMjE4ODQwYWQyZTZmMyIsIm5iZiI6MTczOTQ4Mzg4My43OTAwMDAyLCJzdWIiOiI2N2FlNmFlYjIzNzViZmM1ZjZkMGViNmMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.rh7hhogeYOnO8dj01X-D1o0IktcCfFOO0KXosYtQ3As');
 
