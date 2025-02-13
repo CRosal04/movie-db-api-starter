@@ -12,10 +12,10 @@ function getPopularMovies(){
     // ajax time!
     // create the object
     // TO DO
-    const data = null;
+   // const data = null;
 
 const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+//xhr.withCredentials = true;
 
 xhr.addEventListener('readystatechange', function () {
   if (this.readyState === this.DONE) {
@@ -24,13 +24,13 @@ xhr.addEventListener('readystatechange', function () {
 });
 
 xhr.open('GET', url);
-xhr.setRequestHeader('accept', 'application/json');
-xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNGJhZjZhZWNhOWQ5ZmUxMzQzMjE4ODQwYWQyZTZmMyIsIm5iZiI6MTczOTQ4Mzg4My43OTAwMDAyLCJzdWIiOiI2N2FlNmFlYjIzNzViZmM1ZjZkMGViNmMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.rh7hhogeYOnO8dj01X-D1o0IktcCfFOO0KXosYtQ3As');
-
-xhr.send(data);
+//xhr.setRequestHeader('accept', 'application/json');
+//xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNGJhZjZhZWNhOWQ5ZmUxMzQzMjE4ODQwYWQyZTZmMyIsIm5iZiI6MTczOTQ4Mzg4My43OTAwMDAyLCJzdWIiOiI2N2FlNmFlYjIzNzViZmM1ZjZkMGViNmMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.rh7hhogeYOnO8dj01X-D1o0IktcCfFOO0KXosYtQ3As');
+//xhr.responseType = "json";
+xhr.send();
     // attach event handlers
     // TO DO
-    
+    /*
         // This code can be used for the display of the featured movie
         // (it is a string template)
             `<section id="featured">
@@ -52,7 +52,7 @@ xhr.send(data);
                 </div>
             </section>`
         
-    
+    */
     // set the response type
     // TO DO
     // open the request
