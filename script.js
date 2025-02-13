@@ -98,7 +98,7 @@ function getBirthYearMovies(e){
         // TO DO
         let beginURL = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=1940"
         let endURL = "&sort_by=revenue.desc";
-        let url = '${beginURL}${}${}'
+        let url = `${beginURL}${year}${endURL}`;
         let imgUrl = "https://image.tmdb.org/t/p/w400";
 
         // ajax time!
